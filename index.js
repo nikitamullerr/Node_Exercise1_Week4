@@ -1,8 +1,7 @@
-const express = require('express');
-const app = express();
-const PORT = 3000;
+import express from 'express';
 
-// Middleware to parse JSON bodies (needed for POST/PUT/PATCH)
+const app = express();
+
 app.use(express.json());
 
 //  USERS ROUTES
@@ -47,7 +46,6 @@ app.delete('/products/:id', (req, res) => {
   res.json({ message: `This is the DELETE product path and product ${req.params.id} was removed` });
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(` SHOPLEFT server is running on http://localhost:${PORT}`);
-});
+app.listen(5050,()=>{
+  console.log('http://localhost:5050');
+})
